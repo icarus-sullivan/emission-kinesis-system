@@ -4,6 +4,7 @@ plugins:
   - serverless-plugin-modularize
   - serverless-webpack
   - serverless-iam-roles-per-function
+  # - serverless-offline-kinesis
   - serverless-offline
   - serverless-prune-plugin
 

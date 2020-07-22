@@ -3,6 +3,11 @@ functions:
   ingress:
     handler: src/ingress/index.default
     timeout: 30
+    events:
+      - http:
+          path: /ingress
+          method: post
+          cors: ${self:custom.cors}
     environment:
       FIREHOSE_ARN: ${self:custom.firehose.arn}
       FIREHOSE_NAME: ${self:custom.firehose.name}

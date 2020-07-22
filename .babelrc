@@ -3,7 +3,7 @@
     [
       "@babel/env", {
         "targets": {
-          "node": true
+          "node": "current"
         }
       }
     ]
