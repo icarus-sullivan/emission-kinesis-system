@@ -1,0 +1,42 @@
+{
+  "name": "emission-kinesis-merge",
+  "version": "1.0.0",
+  "description": "Kinesis processing using a pub sub architecture",
+  "main": "index.js",
+  "scripts": {
+    "sls": "npx serverless",
+    "start": "npx serverless offline",
+    "deploy": "yarn sls deploy",
+    "destroy": "yarn sls remove"
+  },
+  "author": "Chris Sullivan",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "serverless": "^1.69.0",
+    "serverless-iam-roles-per-function": "^2.0.2",
+    "serverless-offline": "^6.1.4",
+    "serverless-plugin-modularize": "^1.0.7",
+    "serverless-prune-plugin": "^1.4.2",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.43.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@teleology/dynamo": "^0.0.2",
+    "@teleology/lambda-api": "^0.1.0",
+    "aws-sdk": "^2.673.0",
+    "axios": "^0.19.2",
+    "lodash": "^4.17.15",
+    "uuid": "^7.0.3"
+  }
+}

@@ -1,0 +1,98 @@
+provider:
+  environment:
+    EVENT_TABLE: ${self:custom.ddb.name}
+
+
+custom:
+  ddb:
+    name: event-${self:provider.stage}-table
+
+    role:
+      Effect: Allow
+      Action:
+        - 'dynamodb:*'
+      Resource:
+        - arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.ddb.name}
+        - arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.ddb.name}/*
+
+functions:
+  getConsumer:
+    handler: src/consumers/get.default
+    timeout: 30
+    events:
+      - http:
+          path: /consumer/{id}
+          method: get
+          cors: ${self:custom.cors}
+    iamRoleStatements:
+      - ${self:custom.ddb.role}
+
+  updateConsumer:
+    handler: src/consumers/update.default
+    timeout: 30
+    events:
+      - http:
+          path: /consumer/{id}
+          method: put
+          cors: ${self:custom.cors}
+    iamRoleStatements:
+      - ${self:custom.ddb.role}
+
+  removeConsumer:
+    handler: src/consumers/remove.default
+    timeout: 30
+    events:
+      - http:
+          path: /consumer/{id}
+          method: delete
+          cors: ${self:custom.cors}
+    iamRoleStatements:
+      - ${self:custom.ddb.role}
+
+  createConsumer:
+    handler: src/consumers/create.default
+    timeout: 30
+    events:
+      - http:
+          path: /consumer
+          method: post
+          cors: ${self:custom.cors}
+    iamRoleStatements:
+      - ${self:custom.ddb.role}
+
+  getConsumers: 
+    handler: src/consumers/list.default
+    timeout: 30
+    events:
+      - http:
+          path: /consumers/{hash}
+          method: get
+          cors: ${self:custom.cors}
+    iamRoleStatements:
+      - ${self:custom.ddb.role}
+
+
+resources:
+  Resources: 
+    EventTabel:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.ddb.name}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: hid
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+        GlobalSecondaryIndexes:
+          -
+            IndexName: HashGSI
+            KeySchema:
+              -
+                AttributeName: hid
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
