@@ -1,0 +1,10 @@
+name: Event
+definition:
+  type:
+    type: string
+    description: An event name with version, i.e. example@1.0.12
+    
+  payload:
+    type: object
+    description: consumer or event specific values
+

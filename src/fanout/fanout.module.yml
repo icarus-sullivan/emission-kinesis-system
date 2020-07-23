@@ -11,4 +11,23 @@ functions:
           startingPosition: LATEST
           enabled: true
     iamRoleStatements:
+      # Kinesis
       - ${self:custom.firehose.permissions.read}
+
+      # DynamoDB
+      - ${self:custom.ddb.role}
+
+      # Lambda 
+      - Effect: Allow
+        Action:
+          - 'lambda:InvokeFunction'
+        Resource:
+          - arn:aws:lambda:${self:provider.region}:*:function:*
+
+      #  SNS 
+      - Effect: Allow
+        Action:
+          - 'sns:Publish'
+          - 'sns:SetSMSAttributes'
+        Resource:
+          - '*'

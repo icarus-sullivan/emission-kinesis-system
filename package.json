@@ -1,13 +1,12 @@
 {
-  "name": "emission-kinesis-merge",
+  "name": "aims",
   "version": "1.0.0",
   "description": "Kinesis processing using a pub sub architecture",
   "main": "index.js",
   "scripts": {
-    "sls": "npx serverless",
     "start": "npx serverless offline",
-    "deploy": "yarn sls deploy",
-    "destroy": "yarn sls remove"
+    "deploy": "npx serverless deploy",
+    "destroy": "npx serverless remove"
   },
   "author": "Chris Sullivan",
   "license": "MIT",
@@ -25,8 +24,7 @@
     "serverless": "^1.69.0",
     "serverless-iam-roles-per-function": "^2.0.2",
     "serverless-offline": "^6.1.4",
-    "serverless-offline-kinesis": "^4.0.1",
-    "serverless-plugin-modularize": "^1.0.7",
+    "serverless-plugin-modularize": "^1.0.5",
     "serverless-prune-plugin": "^1.4.2",
     "serverless-webpack": "^5.3.1",
     "webpack": "^4.43.0",
@@ -38,6 +36,7 @@
     "aws-sdk": "^2.673.0",
     "axios": "^0.19.2",
     "lodash": "^4.17.15",
+    "semver": "^7.3.2",
     "uuid": "^7.0.3"
   }
 }

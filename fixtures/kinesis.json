@@ -1,20 +1,20 @@
 {
-  "Records": [
-      {
-          "kinesis": {
-              "kinesisSchemaVersion": "1.0",
-              "partitionKey": "51f34d49-666e-4eeb-b1fe-45c948640b8a",
-              "sequenceNumber": "49605792144755888274982823118830801365492527926245064738",
-              "data": "eyJ0eXBlIjoicHJvY2VzcyIsInBheWxvYWQiOnsiZm9vIjoiYmFyIiwidGVzdCI6MTIzfX0=",
-              "approximateArrivalTimestamp": 1586103679.044
-          },
-          "eventSource": "aws:kinesis",
-          "eventVersion": "1.0",
-          "eventID": "shardId-000000000002:49605792144755888274982823118830801365492527926245064738",
-          "eventName": "aws:kinesis:record",
-          "invokeIdentityArn": "arn:aws:iam::817818992859:role/emission-dev-us-east-1-fanout-lambdaRole",
-          "awsRegion": "us-east-1",
-          "eventSourceARN": "arn:aws:kinesis:us-east-1:817818992859:stream/firehose-dev"
-      }
-  ]
+    "Records": [
+        {
+            "kinesis": {
+                "kinesisSchemaVersion": "1.0",
+                "partitionKey": "67c420bd-52cc-4b02-a32f-891b90ca9d73",
+                "sequenceNumber": "49609144544084687570283736172802975109993973915762819122",
+                "data": "eyJoYXNoIjoiMjg1ZmMxYTI5YzUzMjI0NzYxMDhhNzNkM2QzNzViNjgxMmMyMjNmOSIsImV2ZW50X3R5cGUiOiJkZWFjdGl2YXRlX2JzcSIsImV2ZW50X3BheWxvYWQiOnsidG9rZW4iOiJ0b2tlbjEifX0=",
+                "approximateArrivalTimestamp": 1595489652.071
+            },
+            "eventSource": "aws:kinesis",
+            "eventVersion": "1.0",
+            "eventID": "shardId-000000000003:49609144544084687570283736172802975109993973915762819122",
+            "eventName": "aws:kinesis:record",
+            "invokeIdentityArn": "arn:aws:iam::817818992859:role/emission-dev-fanout-us-east-1-lambdaRole",
+            "awsRegion": "us-east-1",
+            "eventSourceARN": "arn:aws:kinesis:us-east-1:817818992859:stream/firehose-dev"
+        }
+    ]
 }

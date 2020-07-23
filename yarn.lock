@@ -2035,7 +2035,7 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@^2.2.22, aws-sdk@^2.673.0, aws-sdk@^2.698.0, aws-sdk@^2.714.0:
+aws-sdk@^2.673.0, aws-sdk@^2.714.0:
   version "2.717.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.717.0.tgz#be68dab4d9016944814ced76580459c4738763ed"
   integrity sha512-UTDDXF3kUqhaSMAMe6YcOdp3qK7KMikDIAH5SgUPgTUqC4NRSBmLKPdKkXT0ZwAaEOf9QnD1nAV8+WmVRUX+hw==
@@ -5650,13 +5650,6 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-kinesis-readable@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/kinesis-readable/-/kinesis-readable-1.2.0.tgz#2158774cf9aa4b98a8d559d0c711bb8dc19e2d41"
-  integrity sha512-+b/lwz2OZTKUZbT1R+nm2xd1s9sC/PQEktd0NOJu6OqK4VQUs/io/XQwIItPwCkAAdBTPRKEwkjp7PTz7QEyIQ==
-  dependencies:
-    aws-sdk "^2.2.22"
-
 kuler@1.0.x:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/kuler/-/kuler-1.0.1.tgz#ef7c784f36c9fb6e16dd3150d152677b2b0228a6"
@@ -7605,15 +7598,6 @@ serverless-iam-roles-per-function@^2.0.2:
   dependencies:
     lodash "^4.17.15"
 
-serverless-offline-kinesis@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/serverless-offline-kinesis/-/serverless-offline-kinesis-4.0.1.tgz#21c8793ee1d0aca44510b859c8bb813965d96ba7"
-  integrity sha512-E1fBxtb5wMyVWsnV4hd7QhrME6Z7oG30oScFtj2XBmWzvcTqsObUhQHUhoGAKhvyWtcA416ONjaNCN8aS7FL1Q==
-  dependencies:
-    aws-sdk "^2.698.0"
-    kinesis-readable "^1.2.0"
-    lodash "^4.17.15"
-
 serverless-offline@^6.1.4:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/serverless-offline/-/serverless-offline-6.5.0.tgz#13d87eac1fae6fe6543ce0545d91062267262e20"
@@ -7648,7 +7632,7 @@ serverless-offline@^6.1.4:
     velocityjs "^2.0.0"
     ws "^7.2.1"
 
-serverless-plugin-modularize@^1.0.7:
+serverless-plugin-modularize@^1.0.5:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/serverless-plugin-modularize/-/serverless-plugin-modularize-1.0.7.tgz#e46b64dae2c3cfa66a474b9d3919b44b5b9fdcb7"
   integrity sha512-EzN0T3h7MW5C/tg4nJeONQdGviSu4DwD4hkNnTYsoB4Z8/Wtdx4k1Cu4vjHyUQekWBH+dXZ0SzBM2aKeYNMpUQ==
@@ -7665,16 +7649,16 @@ serverless-prune-plugin@^1.4.2:
     bluebird "^3.4.7"
 
 serverless-webpack@^5.3.1:
-  version "5.3.2"
-  resolved "https://registry.yarnpkg.com/serverless-webpack/-/serverless-webpack-5.3.2.tgz#33368c65e8d017e737294f33f382b797c53e6ca9"
-  integrity sha512-/p0Ht87AeQb13Vz3lEcT72vE3GOyDX70iX8fTuDZ0xMwfKtRogRkYzuV89HKc2ULIHx++g/NGTRU6nSGpA3snA==
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/serverless-webpack/-/serverless-webpack-5.3.3.tgz#d474f9c1a3a5a7d1390606ae4c8080e245864904"
+  integrity sha512-FXtVAVpzce/jlOt5u56O8/K4awlYr5ORqgfqZ7NwErb3RUrfdP0too1TV0K3Hl/rM25PHfXEUdq1N6Kk5AxaUw==
   dependencies:
     archiver "^3.0.3"
     bluebird "^3.5.5"
     fs-extra "^8.1.0"
     glob "^7.1.4"
     is-builtin-module "^3.0.0"
-    lodash "^4.17.15"
+    lodash "^4.17.19"
     semver "^6.2.0"
     ts-node "^8.3.0"
 
